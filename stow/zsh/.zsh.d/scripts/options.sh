@@ -8,7 +8,7 @@ os=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 
 # fzf (mac)
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [[ "$(uname)" == "Darwin" ]]; then
   if [ -z "$TMUX" ]; then
@@ -35,7 +35,7 @@ if [[ -d "/usr/lib/jvm/java-11-openjdk-amd64" ]]; then
 fi
 
 if [[ "$os" == "\"Ubuntu"\" ]]; then
-  source /usr/share/doc/fzf/examples/key-bindings.zsh
+  # source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
 
 if [[ "$os" == "\"Manjaro Linux\"" ]]; then
@@ -48,5 +48,13 @@ alert() {
 }
 
 source ~/.config/tmuxinator/tmuxinator.zsh
+
+# WSL2 configurations
+
+export $(dbus-launch)
+export LIBGL_ALWAYS_INDIRECT=1
+export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
+export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+export DISPLAY=$WSL_HOST:0
 
 cd ~

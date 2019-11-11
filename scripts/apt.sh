@@ -1,34 +1,34 @@
 #!/usr/bin/env bash
 
-# echo ""
-# echo "=============================="
-# echo "Adding apt repositories"
-# echo "=============================="
-# echo ""
-# 
-# ppa_list=(
-#   alacritty,ppa:mmstick76/alacritty
-#   speed-ricer,ppa:kgilmer/speed-ricer
-# )
-# 
-# for item in ${ppa_list[@]}
-# do
-#   repo=$(echo $item | cut -d',' -f1)
-#   repo_url=$(echo $item | cut -d',' -f2)
-# 
-#   echo ""
-#   echo "---- $repo ----"
-#   echo ""
-# 
-#   grep ^ /etc/apt/sources.list /etc/apt/sources.list.d/* | grep $repo &> /dev/null
-# 
-#   if [ $? -eq 0 ]; then
-#     echo "Ok"
-#   else
-#     sudo add-apt-repository -y "$repo_url"
-#   fi
-# done
-# 
+ echo ""
+ echo "=============================="
+ echo "Adding apt repositories"
+ echo "=============================="
+ echo ""
+
+ ppa_list=(
+   alacritty,ppa:mmstick76/alacritty
+   # speed-ricer,ppa:kgilmer/speed-ricer
+ )
+
+ for item in ${ppa_list[@]}
+ do
+   repo=$(echo $item | cut -d',' -f1)
+   repo_url=$(echo $item | cut -d',' -f2)
+
+   echo ""
+   echo "---- $repo ----"
+   echo ""
+
+   grep ^ /etc/apt/sources.list /etc/apt/sources.list.d/* | grep $repo &> /dev/null
+
+   if [ $? -eq 0 ]; then
+     echo "Ok"
+   else
+     sudo add-apt-repository -y "$repo_url"
+   fi
+ done
+
 echo ""
 echo "=============================="
 echo "Updating apt"
@@ -73,8 +73,8 @@ apt_list=(
   htop
   git
   git-flow
-  # gitk
-  # alacritty
+  gitk
+  alacritty
   # feh
   nmap
   # poedit
@@ -96,6 +96,8 @@ apt_list=(
   #timeshift
   #mbpfan
   #redshift
+  imagemagick
+  libmagickwand-dev
 )
 
 for item in ${apt_list[@]}

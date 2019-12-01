@@ -66,6 +66,7 @@ apt_list=(
   libxft-dev
   x11-utils
   python-pip
+  libssl1.0-dev
   # tools
   # inxi
   curl

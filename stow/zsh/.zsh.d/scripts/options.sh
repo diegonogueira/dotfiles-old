@@ -47,12 +47,12 @@ alert() {
   notify-send --icon=gtk-info Alert $1
 }
 
-source ~/.config/tmuxinator/tmuxinator.zsh
+#source ~/.config/tmuxinator/tmuxinator.zsh
 
 # WSL2 configurations
 
-export $(dbus-launch)
-export LIBGL_ALWAYS_INDIRECT=1
-export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
-export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
-export DISPLAY=$WSL_HOST:0
+#export $(dbus-launch)
+#export LIBGL_ALWAYS_INDIRECT=1
+#export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
+#export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+#export DISPLAY=$WSL_HOST:0

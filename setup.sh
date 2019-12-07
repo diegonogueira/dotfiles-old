@@ -45,6 +45,7 @@ if ! [[ -f "$DOTFILES_PATH/.current_menu" ]]; then
   echo "4) Macbook Air (Ubuntu) (i3wm)"
   echo "5) Macbook Air (Manjaro) (i3wm)"
   echo "6) iMac (Manjaro) (i3wm)"
+  echo "7) Dell (Pop Os) (gnome)"
   echo ""
   read -p "Device number: " device_opt
 
@@ -62,6 +63,7 @@ case $device_opt in
   "4") DEVICE="macbook-air" ; OS="ubuntu"  ; WM="i3wm" ;;
   "5") DEVICE="macbook-air" ; OS="manjaro" ; WM="i3wm" ;;
   "6") DEVICE="imac"        ; OS="manjaro" ; WM="i3wm" ;;
+  "7") DEVICE="dell"        ; OS="ubuntu"  ; WM="gnome" ;;
   *) echo "!! Invalid option !!" ;;
 esac
 
@@ -87,8 +89,8 @@ case $OS in
 		./scripts/zsh.sh
 		./scripts/stow-ubuntu.sh
 		./scripts/asdf.sh
-		# ./scripts/vim.sh
-    ./scripts/dconf-${DEVICE}.sh
+		./scripts/vim.sh
+    		#./scripts/dconf-${DEVICE}.sh
 		./scripts/config-ubuntu.sh
 esac
 

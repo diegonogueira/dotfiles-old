@@ -8,8 +8,7 @@ echo ""
 
 snap_list=(
   mailspring
-  grv
-  spotify
+  #grv
   postman
 )
 
@@ -29,7 +28,7 @@ do
 done
 
 snap_classic_list=(
-  alacritty
+  #alacritty
   heroku
 )
 

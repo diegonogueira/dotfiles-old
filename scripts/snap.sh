@@ -28,7 +28,7 @@ do
 done
 
 snap_classic_list=(
-  #alacritty
+  # alacritty
   heroku
 )
 

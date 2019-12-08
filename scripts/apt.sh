@@ -1,33 +1,33 @@
 #!/usr/bin/env bash
 
-#echo ""
-#echo "=============================="
-#echo "Adding apt repositories"
-#echo "=============================="
-#echo ""
+echo ""
+echo "=============================="
+echo "Adding apt repositories"
+echo "=============================="
+echo ""
 
-#ppa_list=(
-#  alacritty,ppa:mmstick76/alacritty
-#  speed-ricer,ppa:kgilmer/speed-ricer
-#)
+ppa_list=(
+  alacritty,ppa:mmstick76/alacritty
+  # speed-ricer,ppa:kgilmer/speed-ricer
+)
 
-#for item in ${ppa_list[@]}
-#do
-#  repo=$(echo $item | cut -d',' -f1)
-#  repo_url=$(echo $item | cut -d',' -f2)
-#
-#  echo ""
-#  echo "---- $repo ----"
-#  echo ""
-#
-#  grep ^ /etc/apt/sources.list /etc/apt/sources.list.d/* | grep $repo &> /dev/null
+for item in ${ppa_list[@]}
+do
+  repo=$(echo $item | cut -d',' -f1)
+  repo_url=$(echo $item | cut -d',' -f2)
 
-#  if [ $? -eq 0 ]; then
-#    echo "Ok"
-#  else
-#    sudo add-apt-repository -y "$repo_url"
-#  fi
-#done
+  echo ""
+  echo "---- $repo ----"
+  echo ""
+
+  grep ^ /etc/apt/sources.list /etc/apt/sources.list.d/* | grep $repo &> /dev/null
+
+  if [ $? -eq 0 ]; then
+    echo "Ok"
+  else
+    sudo add-apt-repository -y "$repo_url"
+  fi
+done
 
 echo ""
 echo "=============================="
@@ -64,7 +64,6 @@ apt_list=(
   gpg
   libxft-dev
   #x11-utils
-  python-pip
   # tools
   #inxi
   curl
@@ -78,11 +77,12 @@ apt_list=(
   snapd
   #feh
   nmap
-  dbeaver-ce  
+  dbeaver-ce
   poedit
   zsh
   vim
   neovim
+  python-pip
   python-neovim
   python3-neovim
   fzf
@@ -90,6 +90,7 @@ apt_list=(
   #powertop
   #autokey-gtk
   gnome-tweaks
+  dconf-editor
   #i3status
   #polybar
   tmux

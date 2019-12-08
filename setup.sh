@@ -45,7 +45,7 @@ if ! [[ -f "$DOTFILES_PATH/.current_menu" ]]; then
   echo "4) Macbook Air (Ubuntu) (i3wm)"
   echo "5) Macbook Air (Manjaro) (i3wm)"
   echo "6) iMac (Manjaro) (i3wm)"
-  echo "7) Dell (Pop Os) (gnome)"
+  echo "7) Dell (Ubuntu) (gnome)"
   echo ""
   read -p "Device number: " device_opt
 

@@ -7,7 +7,8 @@
  echo ""
 
  ppa_list=(
-   alacritty,ppa:mmstick76/alacritty
+   # alacritty,ppa:mmstick76/alacritty
+   neovim,ppa:neovim-ppa/stable
    # speed-ricer,ppa:kgilmer/speed-ricer
  )
 
@@ -65,7 +66,6 @@ apt_list=(
   gpg
   libxft-dev
   x11-utils
-  python-pip
   libssl1.0-dev
   # tools
   # inxi
@@ -75,7 +75,7 @@ apt_list=(
   git
   git-flow
   gitk
-  alacritty
+  # alacritty
   # feh
   nmap
   # poedit
@@ -84,6 +84,8 @@ apt_list=(
   neovim
   python-neovim
   python3-neovim
+  python-pip
+  python3-pip
   fzf
   silversearcher-ag
   #powertop

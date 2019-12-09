@@ -96,6 +96,7 @@ case $OS in
 		./scripts/config-ubuntu.sh
 esac
 
+echo "SIMMMMMMMM"
 cd $PRIVATE_DOTFILE_PATH && ./setup.sh
 
 # ==========================

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir -p ~/.config
+
 echo ""
 echo "=============================="
 echo "Removing stow /home"
@@ -8,8 +10,8 @@ echo ""
 
 remove_list=(
   ~/.zshrc
-  ~/.config/alacritty
-  #~/.config/autokey
+  # ~/.config/alacritty
+  # ~/.config/autokey
   ~/.config/htop/htoprc
 )
 
@@ -36,7 +38,7 @@ stow_list=(
   shell
   htop
   #autokey
-  alacritty-${DEVICE}-i3wm
+  # alacritty-${DEVICE}-i3wm
   #xresources-ubuntu
   #regolith
   #i3status

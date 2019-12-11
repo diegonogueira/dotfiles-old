@@ -1,5 +1,5 @@
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    export PATH="$PATH:$HOME/bin"
+    # export PATH="$PATH:$HOME/bin"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/bin"
     export PATH="$PATH:/sbin"

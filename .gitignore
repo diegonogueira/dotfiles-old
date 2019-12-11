@@ -11,3 +11,5 @@
 
 /stow/backlight/.config/backlight/_brightness
 /stow/backlight/.config/backlight/_output
+
+*.log

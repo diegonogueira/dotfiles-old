@@ -31,10 +31,7 @@ alias iexm="iex -S mix"
 alias es="ember server"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    alias ga="gitk --all"
+  alias ga="gitk --all"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    alias ga="gitx --all"
-    # alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-    # alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
-    # alias vi='/Applications/MacVim.app/Contents/MacOS/Vim'
+  alias ga="gitx --all"
 fi

@@ -34,25 +34,25 @@ if [[ -d "/usr/lib/jvm/java-11-openjdk-amd64" ]]; then
   # export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 fi
 
-if [[ "$os" == "\"Ubuntu"\" ]]; then
+# if [[ "$os" == "\"Ubuntu"\" ]]; then
   # source /usr/share/doc/fzf/examples/key-bindings.zsh
-fi
+# fi
 
 if [[ "$os" == "\"Manjaro Linux\"" ]]; then
   source /usr/share/fzf/key-bindings.zsh
   source /usr/share/fzf/completion.zsh
 fi
 
-alert() {
-  notify-send --icon=gtk-info Alert $1
-}
+# alert() {
+#   notify-send --icon=gtk-info Alert $1
+# }
 
 source ~/.config/tmuxinator/tmuxinator.zsh
 
 # WSL2 configurations
 
-export $(dbus-launch)
-export LIBGL_ALWAYS_INDIRECT=1
-export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
+# export $(dbus-launch)
+# export LIBGL_ALWAYS_INDIRECT=1
+# export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
 export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
 export DISPLAY=$WSL_HOST:0

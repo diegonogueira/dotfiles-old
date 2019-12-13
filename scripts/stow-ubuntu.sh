@@ -55,3 +55,21 @@ do
   echo ""
   stow -v -d ${DOTFILES_PATH}/stow ${item} -t ~/
 done
+
+echo ""
+echo "=============================="
+echo "Stowing /etc"
+echo "=============================="
+echo ""
+
+stow_list=(
+  etc-wsl
+)
+
+for item in ${stow_list[@]}
+do
+  echo ""
+  echo "---- stowing /etc $item ----"
+  echo ""
+  sudo stow -v -d ${DOTFILES_PATH}/stow ${item} -t /etc
+done

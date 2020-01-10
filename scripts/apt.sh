@@ -101,6 +101,7 @@ apt_list=(
   #redshift
   imagemagick
   libmagickwand-dev
+  openjdk-8-jdk
 )
 
 for item in ${apt_list[@]}

@@ -91,8 +91,8 @@ case $OS in
 		./scripts/zsh.sh
 		./scripts/stow-ubuntu.sh
 		./scripts/asdf.sh
-		# ./scripts/vim.sh
-    		#./scripts/dconf-${DEVICE}.sh
+		./scripts/vim.sh
+    #./scripts/dconf-${DEVICE}.sh
 		./scripts/config-ubuntu.sh
 esac
 

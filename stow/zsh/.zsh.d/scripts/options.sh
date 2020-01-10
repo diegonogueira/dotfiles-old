@@ -24,15 +24,22 @@ export EDITOR='nvim'
 export TERM="xterm-256color"
 export STOW_DIR=$HOME/.dotfiles
 
-if [[ -d "/usr/lib/jvm/java-10-openjdk" ]]; then
-  export JAVA_HOME="/usr/lib/jvm/java-10-openjdk"
-  export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
-fi
+# if [[ -d "/usr/lib/jvm/java-8-openjdk-amd64" ]]; then
+  export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+  export ANDROID_HOME=~/Android/Sdk
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+  export PATH=$PATH:$ANDROID_HOME/tools/bin
+# fi
 
-if [[ -d "/usr/lib/jvm/java-11-openjdk-amd64" ]]; then
-  export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
-  # export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
-fi
+# if [[ -d "/usr/lib/jvm/java-10-openjdk" ]]; then
+#   export JAVA_HOME="/usr/lib/jvm/java-10-openjdk"
+#   export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+# fi
+
+# if [[ -d "/usr/lib/jvm/java-11-openjdk-amd64" ]]; then
+#   export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+#   # export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+# fi
 
 # if [[ "$os" == "\"Ubuntu"\" ]]; then
   # source /usr/share/doc/fzf/examples/key-bindings.zsh
